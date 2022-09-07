@@ -2,9 +2,9 @@ import glob
 import cv2
 import numpy as np
 #图像路径
-path = r'.\raw_data\train\images\*.png'
+path = './raw_data/train/images/*.png'
 #项目中存放训练所用的npz文件路径
-path2 = r'.\data\Synapse\train_npz\\'
+path2 = '.\data\Synapse\train_npz\\'
 for i,img_path in enumerate(glob.glob(path)):
     	#读入图像
         image = cv2.imread(img_path)
@@ -16,9 +16,9 @@ for i,img_path in enumerate(glob.glob(path)):
         np.savez(path2+str(i),image=image,label=label)
         print('------------',i)
 
-path = r'.\raw_data\val\images\*.png'
+path = './raw_data/val/images/*.png'
 #项目中存放训练所用的npz文件路径
-path2 = r'.\data\Synapse\test_vol_h5\\'
+path2 = '.\data\Synapse\test_vol_h5\\'
 for i,img_path in enumerate(glob.glob(path)):
     	#读入图像
         image = cv2.imread(img_path)
