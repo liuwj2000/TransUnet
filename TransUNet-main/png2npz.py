@@ -4,7 +4,7 @@ import numpy as np
 #图像路径
 path = './raw_data/train/images/*.png'
 #项目中存放训练所用的npz文件路径
-path2 = '.\data\Synapse\train_npz\\'
+path2 = './data/Synapse/train_npz/'
 for i,img_path in enumerate(glob.glob(path)):
     	#读入图像
         image = cv2.imread(img_path)
@@ -18,7 +18,7 @@ for i,img_path in enumerate(glob.glob(path)):
 
 path = './raw_data/val/images/*.png'
 #项目中存放训练所用的npz文件路径
-path2 = '.\data\Synapse\test_vol_h5\\'
+path2 = './data/Synapse/test_vol_h5/'
 for i,img_path in enumerate(glob.glob(path)):
     	#读入图像
         image = cv2.imread(img_path)
